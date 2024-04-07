@@ -238,7 +238,7 @@ public class MainService {
         List<Skill> resumeSkills = skillJPARepository.findSkillsByResumeId(resumechoice);
         List<String> resumeSkill = resumeSkills.stream().map(skill -> skill.getSkill()).toList();
 
-        //전체 이력서 새로운 이력서점수리스트에 담기, 점수는 0으로 시작
+        //전체 이력서 새로운 이력서점수리스트에 담기, 점수는 0으 로 시작
         List<MainResponse.PostSkillDTO> postSkillScore = new ArrayList<>();
         for (int i = 0; i < postJPARepository.findAll().size(); i++) {
             int postId = postJPARepository.findAll().get(i).getId();
